@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc5f5e4427870e42a4719f463469f32, type: 3}
-  m_Name: Coin
+  m_Name: Health
   m_EditorClassIdentifier: 
   lootSprite: {fileID: 0}
-  lootName: Coin
-  dropChance: 100
+  lootName: Health
+  dropChance: 50

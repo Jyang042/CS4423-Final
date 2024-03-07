@@ -11,7 +11,7 @@ public class Loot : ScriptableObject {
     public int dropChance;
 
 
-    public Loot(string lootName, int dropChange){
+    public Loot(string lootName, int dropChance){
         this.lootName = lootName;
         this.dropChance = dropChance;
     }
