@@ -8,7 +8,7 @@ public class LootBag : MonoBehaviour
     public List<Loot> lootList = new List<Loot>();
     [SerializeField] float dropForce = 300f;
 
-    Loot GetDroppedItem()
+    public Loot GetDroppedItem()
     {
         int randomNumber = Random.Range(1,101); //1-100
         List<Loot> possibleItems = new List<Loot>();

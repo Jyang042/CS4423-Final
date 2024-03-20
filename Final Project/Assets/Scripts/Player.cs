@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public  ParticleSystem dust;
 
     [Header("Stats")]
-    [SerializeField] float health = 3;
+    public int health = 3;
     [SerializeField] float stamina = 3;
     [SerializeField] float speed = 0f;
     [SerializeField] float attackSpeed = 0f;
@@ -147,8 +147,6 @@ public class Player : MonoBehaviour
     }
 
     void createDust(){
-
-        
         dust.Play();
     }
 
