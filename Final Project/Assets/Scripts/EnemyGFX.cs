@@ -4,12 +4,15 @@ using UnityEngine;
 using Pathfinding;
 public class EnemyGFX : MonoBehaviour
 {
-
+    Animator am;
+    Enemy em;
+    SpriteRenderer sr;
+    //Rigidbody2D rb;
     public AIPath aiPath;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

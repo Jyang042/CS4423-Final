@@ -30,18 +30,27 @@ public class LootBag : MonoBehaviour
         return null;
     }
 
-    public void InstantiateLoot(Vector3 spawnPosition)
-    {
+    public void InstantiateLoot(Vector3 spawnPosition) {
         Loot droppedItem = GetDroppedItem();
-        if(droppedItem != null)
-        {
+        if (droppedItem != null) {
+            Debug.Log("Dropping Loot: " + droppedItem.lootName);
             GameObject lootGameObject = Instantiate(droppedItemPrefab, spawnPosition, Quaternion.identity);
             lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 
+            // Apply animation controller if loot type is a coin
+            if (droppedItem.animatorController != null && droppedItem.lootName == "Coin") {
+                Animator animator = lootGameObject.GetComponent<Animator>();
+                if (animator != null) {
+                    animator.runtimeAnimatorController = droppedItem.animatorController;
+                }
+            }
 
-            //float dropForce = 300f;
             Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             lootGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
         }
+    }
+
+    public void RemoveItem(GameObject itemToRemove) {
+        Destroy(itemToRemove);
     }
 }

@@ -7,6 +7,7 @@ public class PlayerAnimator : MonoBehaviour
     Animator am;
     Player pm;
     SpriteRenderer sr;
+    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {

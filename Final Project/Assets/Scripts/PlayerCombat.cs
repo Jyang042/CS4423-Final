@@ -6,18 +6,17 @@ public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
     public Transform attackPoint1;
-    public Transform attackPoint2;
-    public Transform attackPoint3;
     public LayerMask enemyLayers;
     public float attackRange = 0.5f;
     public int attackDamage = 40;
-    public Vector2 Knockback;
+    public float knockbackForce = 10f;
     private float attackCooldown = 3f;
     private int attackCounter = 0;
     private float resetCounter = 1f;
 
     // Reference to the Player script for accessing facing direction
     public Player player;
+    public HealthBar healthBar;
     private int currentHealth;
 
     void Start()
@@ -40,14 +39,12 @@ public class PlayerCombat : MonoBehaviour
 
     void HandleFacingDirection()
     {
-        if (attackPoint1 != null && attackPoint2 != null && attackPoint3 != null && player != null)
+        if (attackPoint1 != null && player != null)
         {
             float horizontalDirection = player.lastHorizontalVector;
 
             // Flip the attack points based on the facing direction
             FlipAttackPoint(attackPoint1, horizontalDirection);
-            FlipAttackPoint(attackPoint2, horizontalDirection);
-            FlipAttackPoint(attackPoint3, horizontalDirection);
         }
     }
 
@@ -67,11 +64,15 @@ public class PlayerCombat : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        currentHealth = Mathf.Max(currentHealth, 0);
         
-        //Play hurt animation
+        // Call the TakeDamage method of the HealthBar script directly
+        healthBar.TakeDamage(damageAmount);
+        
+        // Play hurt animation
         animator.SetTrigger("Hurt");
         
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -83,6 +84,7 @@ public class PlayerCombat : MonoBehaviour
         //Die Aniamtion
         animator.SetBool("IsDead", true);
         //Game Over Screen
+        FindObjectOfType<GameManager>().EndGame();
 
     }
 
@@ -94,11 +96,11 @@ public class PlayerCombat : MonoBehaviour
         // Detect Enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint1.position, attackRange, enemyLayers);
 
-        // Damage them
+        // Damage them and apply knockback
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            // Debug.Log("Enemy hit " + enemy.name);
+            Vector2 knockbackDirection = enemy.transform.position - transform.position;
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage, knockbackDirection, knockbackForce);
         }
     }
 
@@ -108,13 +110,13 @@ public class PlayerCombat : MonoBehaviour
         animator.SetTrigger("Attack2");
 
         // Detect Enemies in range of attack
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint2.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint1.position, attackRange, enemyLayers);
 
-        // Damage them
+        // Damage them and apply knockback
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            // Debug.Log("Enemy hit " + enemy.name);
+            Vector2 knockbackDirection = enemy.transform.position - transform.position;
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage, knockbackDirection, knockbackForce);
         }
     }
 
@@ -124,13 +126,13 @@ public class PlayerCombat : MonoBehaviour
         animator.SetTrigger("Attack3");
 
         // Detect Enemies in range of attack
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint3.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint1.position, attackRange, enemyLayers);
 
-        // Damage them
+        // Damage them and apply knockback
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            // Debug.Log("Enemy hit " + enemy.name);
+            Vector2 knockbackDirection = enemy.transform.position - transform.position;
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage, knockbackDirection, knockbackForce);
         }
     }
 

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootSprite: {fileID: 21300000, guid: fbec80687a1c865459f18bc7c181f2f2, type: 3}
   lootName: Item
-  dropChance: 10
-  animator: {fileID: 0}
+  dropChance: 1
+  animatorController: {fileID: 0}
