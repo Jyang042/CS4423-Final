@@ -23,6 +23,17 @@ public class EnemyAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
+        // Find the target GameObject dynamically and assign its transform to the target variable
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            target = player.transform;
+        }
+        else
+        {
+            Debug.LogError("Player not found! Make sure it's tagged as 'Player'.");
+        }
+
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
 

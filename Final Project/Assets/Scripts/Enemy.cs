@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float attackRange = 1.5f;
     [SerializeField] int attackDamage = 10;
     [SerializeField] float attackCooldown = 5f;
+    [SerializeField] float despawnTime = 3f;
     private float lastAttackTime;
     private float currentHealth;
     private bool isDead = false;
@@ -53,7 +54,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            animator.SetTrigger("Hurt");
+            if(ParameterExists("Hurt")){
+            animator.SetTrigger("Hurt");}
             // Apply knockback
             rb.velocity = Vector2.zero; // Reset velocity
             rb.AddForce(knockbackDirection.normalized * knockbackForce, ForceMode2D.Impulse);
@@ -67,9 +69,10 @@ public class Enemy : MonoBehaviour
     {   
         if (isDead) return; // If already dead, do nothing
         isDead = true;
-        animator.SetTrigger("Hurt");
-        Debug.Log("Enemy" + this.name + "Died");
-        // Die Animation
+        if(ParameterExists("Hurt")){
+        animator.SetTrigger("Hurt");}
+        //Debug.Log("Enemy" + this.name + "Died");
+        //Die Animation
         animator.SetBool("IsDead", true);
         //Disable Movement
         rb.velocity = Vector2.zero;
@@ -79,7 +82,7 @@ public class Enemy : MonoBehaviour
         // Disabling enemy's behavior
         this.enabled = false;
         // Destroy the GameObject after some time
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, despawnTime);
     }
 
     private bool CanAttack()
@@ -132,5 +135,18 @@ public class Enemy : MonoBehaviour
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    bool ParameterExists(string paramName)
+    {
+        if (animator != null && animator.runtimeAnimatorController != null && animator.parameterCount > 0)
+        {
+            foreach (AnimatorControllerParameter parameter in animator.parameters)
+            {
+                if (parameter.name == paramName)
+                    return true;
+            }
+        }
+        return false;
     }
 }

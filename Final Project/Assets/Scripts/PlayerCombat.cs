@@ -18,6 +18,7 @@ public class PlayerCombat : MonoBehaviour
     public Player player;
     public HealthBar healthBar;
     private int currentHealth;
+    private bool isAlive = true;
 
     void Start()
     {
@@ -28,13 +29,17 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        HandleFacingDirection();
-
-        // Check for attack input
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(isAlive)
         {
-            StartCoroutine(PerformCombo());
-        }
+
+            HandleFacingDirection();
+
+            // Check for attack input
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                StartCoroutine(PerformCombo());
+            }
+        }    
     }
 
     void HandleFacingDirection()
@@ -80,9 +85,14 @@ public class PlayerCombat : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("You Died");
+        //Debug.Log("You Died");
         //Die Aniamtion
         animator.SetBool("IsDead", true);
+        //Disable Player
+        isAlive = false;
+        player.enabled = false;
+        //Stop spawning Enemies
+        FindObjectOfType<MobSpawner>().StopSpawning();
         //Game Over Screen
         FindObjectOfType<GameManager>().EndGame();
 

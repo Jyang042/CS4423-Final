@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platforms
   - Item
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2160743969
+    locked: 0
+  - name: FX
+    uniqueID: 418771883
     locked: 0
   - name: Player
     uniqueID: 1599568967

@@ -26,14 +26,14 @@ public class LootBag : MonoBehaviour
             return droppedItem;
         }
 
-        Debug.Log("No Loot Dropped.");
+        //Debug.Log("No Loot Dropped.");
         return null;
     }
 
     public void InstantiateLoot(Vector3 spawnPosition) {
         Loot droppedItem = GetDroppedItem();
         if (droppedItem != null) {
-            Debug.Log("Dropping Loot: " + droppedItem.lootName);
+            //Debug.Log("Dropping Loot: " + droppedItem.lootName);
             GameObject lootGameObject = Instantiate(droppedItemPrefab, spawnPosition, Quaternion.identity);
             lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 

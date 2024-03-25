@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc5f5e4427870e42a4719f463469f32, type: 3}
-  m_Name: Health
+  m_Name: Diamond
   m_EditorClassIdentifier: 
-  lootPrefab: {fileID: 4198658035683960057, guid: 78d58db257cef3549922dc0ce6df7b17, type: 3}
-  lootSprite: {fileID: 21300000, guid: fe26af773bb71cc4296eef0d54ad72da, type: 3}
-  lootName: Health
-  dropChance: 50
-  lootValue: 0
+  lootSprite: {fileID: -996005596, guid: 92b0dc134cb2c1c408eb789c29f474b9, type: 3}
+  lootName: Diamond
+  dropChance: 0
+  lootValue: 25
   animatorController: {fileID: 0}
