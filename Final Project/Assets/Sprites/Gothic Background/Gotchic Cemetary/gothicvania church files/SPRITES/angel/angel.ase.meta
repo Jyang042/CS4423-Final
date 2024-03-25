@@ -1,0 +1,447 @@
+fileFormatVersion: 2
+guid: 3ddf9d08f43920948945f618feb2077f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: angel_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.27631578}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 250
+      y: 4
+      width: 82
+      height: 76
+    spriteID: 9d2f97b79d2a102498a9f691b03d1e96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 250, y: 4}
+  - name: angel_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.29333332}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 4
+      width: 82
+      height: 75
+    spriteID: 32ddd83c947a1d84a9d0830ae151657b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 4}
+  - name: angel_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.3108108}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 125
+      width: 82
+      height: 74
+    spriteID: 0416ee0aee237434f82d8fa648853494
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 125}
+  - name: angel_Frame_3
+    originalName: 
+    pivot: {x: 0.49382716, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 4
+      width: 81
+      height: 80
+    spriteID: fa72741df6084b249889062b7a854d37
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 4}
+  - name: angel_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.22222222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 94
+      y: 125
+      width: 96
+      height: 63
+    spriteID: 7a3682fd668e61144bb3dd64c2259a1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 94, y: 125}
+  - name: angel_Frame_5
+    originalName: 
+    pivot: {x: 0.5135135, y: -0.2909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 125
+      width: 37
+      height: 55
+    spriteID: 5dd9acfdd65640141a4712e4a21bc947
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 125}
+  - name: angel_Frame_6
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.36538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 430
+      y: 4
+      width: 46
+      height: 52
+    spriteID: fba109caad54f044dae241f2f92e0a77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 430, y: 4}
+  - name: angel_Frame_7
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.4117647}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 94
+      y: 196
+      width: 86
+      height: 51
+    spriteID: 9dcde06a31d7f1f439849a12f14951ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 94, y: 196}
+  - name: angel_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.3442623}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 198
+      y: 125
+      width: 84
+      height: 61
+    spriteID: 2c12b7d2c88f66140afa41c1d57ac4f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 198, y: 125}
+  - name: angel_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.08411215}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 81
+      y: 4
+      width: 72
+      height: 107
+    spriteID: 082fe874eb8f02442925a25d17821ee3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 81, y: 4}
+  - name: angel_Frame_10
+    originalName: 
+    pivot: {x: 0.49275362, y: -0.035398234}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 69
+      height: 113
+    spriteID: e5f7b08ed3765494fa4a4abd3e13b52f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 50009777
+    name: angel
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: angel_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 21
+        width: 82
+        height: 76
+      spriteId: 9d2f97b79d2a102498a9f691b03d1e96
+    - name: angel_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 20
+        y: 22
+        width: 82
+        height: 75
+      spriteId: 32ddd83c947a1d84a9d0830ae151657b
+    - name: angel_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 20
+        y: 23
+        width: 82
+        height: 74
+      spriteId: 0416ee0aee237434f82d8fa648853494
+    - name: angel_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 21
+        y: 10
+        width: 81
+        height: 80
+      spriteId: fa72741df6084b249889062b7a854d37
+    - name: angel_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 13
+        y: 14
+        width: 96
+        height: 63
+      spriteId: 7a3682fd668e61144bb3dd64c2259a1d
+    - name: angel_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 42
+        y: 16
+        width: 37
+        height: 55
+      spriteId: 5dd9acfdd65640141a4712e4a21bc947
+    - name: angel_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 38
+        y: 19
+        width: 46
+        height: 52
+      spriteId: fba109caad54f044dae241f2f92e0a77
+    - name: angel_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 18
+        y: 21
+        width: 86
+        height: 51
+      spriteId: 9dcde06a31d7f1f439849a12f14951ea
+    - name: angel_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 19
+        y: 21
+        width: 84
+        height: 61
+      spriteId: 2c12b7d2c88f66140afa41c1d57ac4f4
+    - name: angel_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 25
+        y: 9
+        width: 72
+        height: 107
+      spriteId: 082fe874eb8f02442925a25d17821ee3
+    - name: angel_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 27
+        y: 4
+        width: 69
+        height: 113
+      spriteId: e5f7b08ed3765494fa4a4abd3e13b52f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 122, y: 117}

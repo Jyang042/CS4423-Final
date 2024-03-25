@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 4Split
+  m_Controller: {fileID: 9100000, guid: bcde56e43a13c714db6f1fbb3f22e762, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ec8a494688df2054893e048b34061a61, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 56572653693c29d47a8fbc82f4377555, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cf06f26a822ae9e409c3eccf1e65e1ce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4cb181e75771d8447a8145c2c2269471, type: 2}
