@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4137652197963515258}
   - component: {fileID: 7675904122828167021}
   - component: {fileID: 7893313908163356403}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Chest
-  m_TagString: Item
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,9 +170,10 @@ MonoBehaviour:
   animator: {fileID: 7675904122828167021}
   droppedItemPrefab: {fileID: 4198658035683960057, guid: 78d58db257cef3549922dc0ce6df7b17, type: 3}
   lootList:
-  - {fileID: 11400000, guid: b374d3cc587f34d4481c12de3a4ff397, type: 2}
+  - {fileID: 11400000, guid: 70dbc52d0c200a54e87a574eebd44b1f, type: 2}
+  - {fileID: 11400000, guid: d184f0aa78bd88a49ba6b8ccb5cf77bf, type: 2}
   - {fileID: 11400000, guid: 25588f72f01f19d46a8d776814b1b482, type: 2}
-  dropForce: 300
+  dropForce: 10
   platformLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -230,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8887744458072826717, guid: 27eec7e973ea917418cde6100fbe9239, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

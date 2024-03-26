@@ -7,6 +7,7 @@ TagManager:
   - Platforms
   - Item
   - UI
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Player
   - Enemies
   - Items
-  - 
+  - Chests
   - Platforms
   - 
   - 

@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int attackDamage = 10;
     [SerializeField] float attackCooldown = 5f;
     [SerializeField] float despawnTime = 3f;
+    [SerializeField] int scoreValue = 10;
     private float lastAttackTime;
     private float currentHealth;
     private bool isDead = false;
@@ -79,9 +80,11 @@ public class Enemy : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
         //Generate Loot
         GetComponent<LootBag>().InstantiateLoot(transform.position);
-        // Disabling enemy's behavior
+        //Add Score
+        FindObjectOfType<GameManager>().AddScore(scoreValue);
+        //Disabling enemy's behavior
         this.enabled = false;
-        // Destroy the GameObject after some time
+        //Destroy the GameObject after some time
         Destroy(gameObject, despawnTime);
     }
 

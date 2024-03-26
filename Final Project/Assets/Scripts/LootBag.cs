@@ -6,7 +6,7 @@ public class LootBag : MonoBehaviour
 {
     public GameObject droppedItemPrefab;
     public List<Loot> lootList = new List<Loot>();
-    [SerializeField] float dropForce = 300f;
+    [SerializeField] float dropForce = 50f;
 
     public Loot GetDroppedItem()
     {

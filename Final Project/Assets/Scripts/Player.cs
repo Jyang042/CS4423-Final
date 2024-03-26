@@ -28,11 +28,13 @@ public class Player : MonoBehaviour
     public float feetRadius;
     public LayerMask Platforms;
     private Animator animator;
+    private GoldCounter goldCounter;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        goldCounter = GoldCounter.singleton;
     }
 
     void Update()
@@ -116,13 +118,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Item")) {
-            LootBag lootBag = other.GetComponent<LootBag>();
-            if (lootBag != null) {
-                lootBag.RemoveItem(other.gameObject);
-                // Add logic here to process the picked up item
-                // For example, you can increase player's health, coins, etc.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Trigger entered with: " + collision.gameObject.name);
+
+        if (collision.CompareTag("Item"))
+        {
+            Debug.Log("Loot detected!");
+            Loot loot = collision.GetComponent<Loot>(); // Get the Loot component from the collided object
+            if (loot != null && goldCounter != null)
+            {
+                goldCounter.RegisterLoot(loot); // Register the loot with the GoldCounter
+                Destroy(collision.gameObject); // Destroy the loot object once it's picked up
             }
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject settingsPanel;
     public GameObject GameOverPanel;
+    public TextMeshProUGUI scoreText;
+
+    private int totalScore = 0;
+
 
     public void Play(){
         Debug.Log("Playing.");
@@ -50,6 +55,18 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over");
         GameOverPanel.SetActive(true);
+        UpdateScoreText();
+    }
+
+    void UpdateScoreText()
+    {
+        // Get the total score from the ScoreManager and update the score text
+        scoreText.text = "Total Score: " + totalScore.ToString();
+    }
+
+    public void AddScore(int score)
+    {
+        totalScore += score;
     }
 
     public void RestartButton(){

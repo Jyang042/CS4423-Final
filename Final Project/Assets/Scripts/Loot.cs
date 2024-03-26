@@ -6,6 +6,14 @@ using UnityEngine;
 [CreateAssetMenu]
 
 public class Loot : ScriptableObject {
+
+    public enum LootType
+    {
+        Coin,
+        Gem,
+        Diamond,
+        Heart
+    }
     public Sprite lootSprite;
     public string lootName;
     public int dropChance;

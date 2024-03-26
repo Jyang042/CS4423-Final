@@ -202,6 +202,7 @@ MonoBehaviour:
   attackDamage: 1
   attackCooldown: 5
   despawnTime: 1
+  scoreValue: 25
   attackPoint: {fileID: 1804942531308851933}
 --- !u!114 &3815907230714160824
 MonoBehaviour:
@@ -220,7 +221,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 25588f72f01f19d46a8d776814b1b482, type: 2}
   - {fileID: 11400000, guid: a7c4fc4c2bbc15f4d840c5d220362cbf, type: 2}
   - {fileID: 11400000, guid: b374d3cc587f34d4481c12de3a4ff397, type: 2}
-  dropForce: 300
+  dropForce: 10
 --- !u!114 &4528335135083048306
 MonoBehaviour:
   m_ObjectHideFlags: 0
