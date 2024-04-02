@@ -1,22 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+using UnityEditor.Build;
 using UnityEngine;
 
-[CreateAssetMenu]
-
-public class Loot : ScriptableObject {
-
-    public enum LootType
-    {
-        Coin,
-        Gem,
-        Diamond,
-        Heart
-    }
-    public Sprite lootSprite;
-    public string lootName;
-    public int dropChance;
-    public int lootValue;
-    public AnimatorController animatorController;
+public class Loot : MonoBehaviour
+{
+    [Header ("Stats")]
+    [SerializeField] public string lootName;
+    [SerializeField] public int lootValue = 1;
+    [SerializeField] public float dropChance = 1f;
+    
 }

@@ -8,6 +8,7 @@ TagManager:
   - Item
   - UI
   - Chest
+  - Heart
   layers:
   - Default
   - TransparentFX

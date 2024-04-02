@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject GameOverPanel;
     public TextMeshProUGUI scoreText;
+    public AudioMixer audioMixer;
 
     private int totalScore = 0;
 
@@ -75,5 +76,9 @@ public class GameManager : MonoBehaviour
 
     public void MainMenuButton(){
         SceneManager.LoadScene("Main Menu");
+    }
+
+    public void SetVolume (float volume){
+        audioMixer.SetFloat("volume", volume);
     }
 }

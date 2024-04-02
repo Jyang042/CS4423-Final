@@ -19,8 +19,6 @@ public class HealthBar : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
-
         // Trigger Damage Accordingly
         if (damage == 1)
         {
@@ -40,11 +38,13 @@ public class HealthBar : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void Heal()
+    public void Heal(int healAmount)
     {
         if (currentSegments < maxSegments)
         {
-            currentSegments++;
+            // Play healing animation
+            animator.SetTrigger("Heal");
+            currentSegments += healAmount;
             UpdateHealthBar();
         }
     }
@@ -61,4 +61,5 @@ public class HealthBar : MonoBehaviour
         // Adjust health directly based on damage received
         TakeDamage(damage);
     }
+
 }

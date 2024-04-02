@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.2}
+    oldSize: {x: 0.32, y: 0.24}
     newSize: {x: 0.28, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -168,11 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   animator: {fileID: 7675904122828167021}
-  droppedItemPrefab: {fileID: 4198658035683960057, guid: 78d58db257cef3549922dc0ce6df7b17, type: 3}
-  lootList:
-  - {fileID: 11400000, guid: 70dbc52d0c200a54e87a574eebd44b1f, type: 2}
-  - {fileID: 11400000, guid: d184f0aa78bd88a49ba6b8ccb5cf77bf, type: 2}
-  - {fileID: 11400000, guid: 25588f72f01f19d46a8d776814b1b482, type: 2}
+  lootPrefabs:
+  - {fileID: 719802098719660302, guid: ab011748647aa0a4aab1fb0c59056148, type: 3}
+  - {fileID: 4126830825180136012, guid: 2268bc905816a91498e8fcb0ec4feab3, type: 3}
+  - {fileID: 5535165861412706410, guid: 03ee4406429747d459cbec0dfaad14c4, type: 3}
   dropForce: 10
   platformLayer:
     serializedVersion: 2
@@ -185,13 +184,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3371093834683570622}
     m_Modifications:
+    - target: {fileID: 4246112128687115824, guid: 27eec7e973ea917418cde6100fbe9239, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246112128687115824, guid: 27eec7e973ea917418cde6100fbe9239, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8158983096807391194, guid: 27eec7e973ea917418cde6100fbe9239, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8158983096807391194, guid: 27eec7e973ea917418cde6100fbe9239, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8158983096807391194, guid: 27eec7e973ea917418cde6100fbe9239, type: 3}
       propertyPath: m_LocalPosition.z
@@ -275,6 +282,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  glowMaterial: {fileID: -876546973899608171, guid: e132b49827e6f1844a08d1c53ecfd62e, type: 3}
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!4 &6835879817341674231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8158983096807391194, guid: 27eec7e973ea917418cde6100fbe9239, type: 3}

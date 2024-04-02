@@ -28,13 +28,11 @@ public class Player : MonoBehaviour
     public float feetRadius;
     public LayerMask Platforms;
     private Animator animator;
-    private GoldCounter goldCounter;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        goldCounter = GoldCounter.singleton;
     }
 
     void Update()
@@ -115,22 +113,6 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Trigger entered with: " + collision.gameObject.name);
-
-        if (collision.CompareTag("Item"))
-        {
-            Debug.Log("Loot detected!");
-            Loot loot = collision.GetComponent<Loot>(); // Get the Loot component from the collided object
-            if (loot != null && goldCounter != null)
-            {
-                goldCounter.RegisterLoot(loot); // Register the loot with the GoldCounter
-                Destroy(collision.gameObject); // Destroy the loot object once it's picked up
-            }
         }
     }
 }

@@ -1,56 +1,59 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LootBag : MonoBehaviour
 {
-    public GameObject droppedItemPrefab;
-    public List<Loot> lootList = new List<Loot>();
+    public List<GameObject> lootPrefabs = new List<GameObject>();
     [SerializeField] float dropForce = 50f;
 
-    public Loot GetDroppedItem()
+    public GameObject GetDroppedItem()
     {
-        int randomNumber = Random.Range(1,101); //1-100
-        List<Loot> possibleItems = new List<Loot>();
+        float totalDropChance = 0f;
 
-        foreach(Loot item in lootList)
+        // Calculate total drop chance
+        foreach (GameObject lootPrefab in lootPrefabs)
         {
-            if (randomNumber <= item.dropChance)
+            totalDropChance += lootPrefab.GetComponent<Loot>().dropChance;
+        }
+
+        // Generate a random number between 0 and total drop chance
+        float randomValue = Random.Range(0f, totalDropChance);
+
+        // Iterate through loot prefabs and determine which one to drop
+        foreach (GameObject lootPrefab in lootPrefabs)
+        {
+            float dropChance = lootPrefab.GetComponent<Loot>().dropChance;
+
+            // If the random value falls within this loot prefab's drop chance range, drop it
+            if (randomValue < dropChance)
             {
-                possibleItems.Add(item);
+                return lootPrefab;
             }
-        }
-        if(possibleItems.Count > 0)
-        {
-            Loot droppedItem = possibleItems[Random.Range(0, possibleItems.Count)]; //randomly drop item
-            return droppedItem;
+
+            // Subtract this loot prefab's drop chance from randomValue
+            randomValue -= dropChance;
         }
 
-        //Debug.Log("No Loot Dropped.");
+        // If no loot prefab is selected, return null
         return null;
     }
 
-    public void InstantiateLoot(Vector3 spawnPosition) {
-        Loot droppedItem = GetDroppedItem();
-        if (droppedItem != null) {
-            //Debug.Log("Dropping Loot: " + droppedItem.lootName);
+    public void InstantiateLoot(Vector3 spawnPosition)
+    {
+        GameObject droppedItemPrefab = GetDroppedItem();
+        if (droppedItemPrefab != null)
+        {
+            // Instantiate Object
             GameObject lootGameObject = Instantiate(droppedItemPrefab, spawnPosition, Quaternion.identity);
-            lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 
-            // Apply animation controller if loot type is a coin
-            if (droppedItem.animatorController != null && droppedItem.lootName == "Coin") {
-                Animator animator = lootGameObject.GetComponent<Animator>();
-                if (animator != null) {
-                    animator.runtimeAnimatorController = droppedItem.animatorController;
-                }
-            }
-
+            // Add Force
             Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             lootGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
         }
     }
 
-    public void RemoveItem(GameObject itemToRemove) {
+    public void RemoveItem(GameObject itemToRemove)
+    {
         Destroy(itemToRemove);
     }
 }

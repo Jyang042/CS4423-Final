@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc5f5e4427870e42a4719f463469f32, type: 3}
-  m_Name: Diamond
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: -996005596, guid: 92b0dc134cb2c1c408eb789c29f474b9, type: 3}
-  lootName: Diamond
-  dropChance: 0
-  lootValue: 25
-  animatorController: {fileID: 0}
+  components: []
